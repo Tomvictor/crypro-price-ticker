@@ -8,10 +8,9 @@ import retrofit2.http.GET
 
 interface  KoinexApiService {
 
-    @GET("/ticker")
-    fun CheckLogin()
+    @GET("api/ticker/")
+    fun CheckPrice()
             : Observable<KoinexResponse>
-
 
     companion object {
         fun create(): KoinexApiService {
@@ -19,7 +18,7 @@ interface  KoinexApiService {
             val retrofit = Retrofit.Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://koinex.in/api")
+                .baseUrl("https://koinex.in/")
                 .build()
             return retrofit.create(KoinexApiService::class.java)
         }

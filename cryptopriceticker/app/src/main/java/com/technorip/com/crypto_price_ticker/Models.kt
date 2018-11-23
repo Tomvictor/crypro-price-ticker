@@ -1,5 +1,6 @@
 package com.technorip.com.crypto_price_ticker
 
+
 class KoinexResponse(
     prices:String,
     stats:CryptoStat
@@ -13,20 +14,20 @@ class CryptoStat(
 )
 
 class InrStat(
-    ETH:String,
-    BTC:String,
-    LTC:String,
-    XRP:String,
-    OMG:String,
-    REQ:String,
-    ZRX:String,
-    GNT:String,
-    BAT:String,
-    AE:String,
-    TRX:String,
-    XLM:String,
-    NEO:String,
-    GAS:String
+    ETH:CryptoDetail,
+    BTC:CryptoDetail,
+    LTC:CryptoDetail,
+    XRP:CryptoDetail,
+    OMG:CryptoDetail,
+    REQ:CryptoDetail,
+    ZRX:CryptoDetail,
+    GNT:CryptoDetail,
+    BAT:CryptoDetail,
+    AE:CryptoDetail,
+    TRX:CryptoDetail,
+    XLM:CryptoDetail,
+    NEO:CryptoDetail,
+    GAS:CryptoDetail
 
 )
 
@@ -41,5 +42,4 @@ class CryptoDetail(
     currency_short_form:String,
     per_change:String,
     trade_volume:String
-
 )
